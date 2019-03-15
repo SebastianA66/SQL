@@ -41,7 +41,7 @@ namespace sql
             }
             else
             {
-                Debug.Log("PASSWORDS NOT THE SAME SCRUB!!!");
+                Debug.Log("Password not same!");
             }
         }
 

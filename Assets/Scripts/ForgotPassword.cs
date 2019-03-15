@@ -26,7 +26,7 @@ namespace sql
             code = RandomString(12);
 
             MailMessage mail = new MailMessage();
-            MailAddress ourEmail = new MailAddress("sqlunityclasssydney@gmail.com", "SQueaLbusiness plz work");
+            MailAddress ourEmail = new MailAddress("", "SQueaLbusiness plz work");
             // Receiver
             mail.To.Add(email.text);
             // Sender
@@ -38,7 +38,7 @@ namespace sql
 
             SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
             smtpServer.Port = 25;
-            smtpServer.Credentials = new System.Net.NetworkCredential("sqlunityclasssydney@gmail.com", "sqlpassword") as ICredentialsByHost;
+            smtpServer.Credentials = new System.Net.NetworkCredential("", "sqlpassword") as ICredentialsByHost;
             smtpServer.EnableSsl = true;
             ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate cert, X509Chain chain, SslPolicyErrors policyErrors) { return true; };
             smtpServer.Send(mail);
